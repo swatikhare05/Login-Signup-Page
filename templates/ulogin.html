@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock title %}
+{% block body %}
+<h1 style="position:absolute;top:120px;left:620px;">Login</h1>
+<form class="container" action="/ulogin" method="post" style="padding-top:150px;width:750px">
+{%csrf_token%}
+<div class="mb-3">
+  <label for="logusername" class="form-group">Username:</label>
+  <input type="text" class="form-control" id="logusername" name="logusername" placeholder="Enter your username" Required>
+</div>
+<div class="mb-3">
+  <label for="logpswd" class="form-group">Password:</label>
+  <input type="password" class="form-control" id="logpswd" name="logpswd" placeholder="Enter your password" Required>
+</div>
+<button type="submit" class="btn btn-primary">Login</button>
+</div>
+</form>
+
+{% endblock body %}
